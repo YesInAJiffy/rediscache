@@ -20,3 +20,10 @@ The following guides illustrate how to use some features concretely:
 * [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 * [Messaging with Redis](https://spring.io/guides/gs/messaging-redis/)
 
+### Docker commands
+docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server
+docker exec -it redis-stack-server redis-cli
+#### Redis-CLI commands
+KEYS *
+MGET "books::4”
+FLUSHALL
